@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Document sans nom</title>
+</head>
+
+<head>
+<style>
+
+.button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color:#9C9;
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.button:hover {
+  background-color:#FF9n; 
+}
+
+.button:active {
+  background-color:#CCF; 
+}
+
+
+
+	.vert {
+  background-color:#CFC;
+  color:#FC9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+	.galerie {
+ margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+	}
+	.galerie li {
+		  display: inline-block;
+  margin-right: 10px;
+	}
+
+
+.rouge {
+  background-color:#FCC;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+	.animated {
+  animation-duration: 1s;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+	</style>
+<meta charset="utf-8">
+<title>Gestion d'une galerie d'images interactive</title>
+</head>
+
+<body>
+	<div align="center" id="Galerie"><ul class="galerie">
+		<li><button class="button animated" onClick="f1('montre.jpeg')"><img src="./montre.jpeg" id="image1" width="436" height="296" ></button></li>
+<li><button class="button animated" onClick="f2('pul.jpeg')"><img src="./pul.jpeg" id="image2" width="498" height="294"></button></li>
+<li><button class="button animated" onClick="f3('run.png')"><img src="./run.png" id="image3" width="441" height="292"></button></li>
+
+		</ul>
+	</div>
+	
+	<div align="center" style="display: block;">
+		<input name="Précédent" type="button" id="Précédent" value="Précédent" onClick="précédent(document.getElementById('cible').src)">
+		<input name="Suivant" type="button" id="Suivant" value="Suivant" onClick="suivante(document.getElementById('cible').src)">
+		<input name="Masquer" type="button" id="Masquer" value="Masquer" class="rouge" onClick="var affichage = document.getElementById('affichage'); affichage.style.display = 'none';">
+		<input name="Ré-afficher" type="button" id="Ré-afficher" class="vert" value="Réafficher" onClick="var affichage = document.getElementById('affichage'); affichage.style.display = 'block';">
+	</div>
+	
+	<div id="affichage" align="center">
+		<img id="cible" src="">
+		<h3 id="titre"></h3>	</div>
+	<script src="./main.js"></script>
+</body>
+</html>
+
+<body>
+</body>
+</html>
